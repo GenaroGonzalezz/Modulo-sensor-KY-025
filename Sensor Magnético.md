@@ -26,10 +26,12 @@ Se llevó a cabo la conexión del sensor Reed Switch en conjunto con un display 
  
 KY-025	| Arduino
 --------|-------
-A0 |	A0
+A0 |	40
 G	| GND
 " +	"| 5V
-D0 | 3
+D0 | D0
 
-![Diagrama](/images/logo.png)
+![Diagrama](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/Diagrama025.png)
+
+## Código
 
