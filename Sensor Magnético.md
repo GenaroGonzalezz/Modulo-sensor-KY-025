@@ -32,6 +32,9 @@ G	| GND
 D0 | D0
 
 ![Diagrama](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/Diagrama025.png)
+![Pruebas1](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/200281094_4189357484453623_5645018992284595790_n.jpg)
+![Pruebas1](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/200087686_160587269438462_2896078833731179641_n.jpg)
+![Pruebas1](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/196379647_522368268805317_5530288702061372369_n.jpg)
 
 ## Código
 
