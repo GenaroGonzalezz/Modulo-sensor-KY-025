@@ -32,9 +32,70 @@ G	| GND
 D0 | D0
 
 ![Diagrama](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/Diagrama025.png)
+
+## Imagen 1
+<p>
+A continuación se puede observar el circuito completo en el cual se encuentra conectado el módulo al Arduino, así como también se aprecia el imán que será utilizado para llevar a cabo las pruebas.
+</p>
+
 ![Pruebas1](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/200281094_4189357484453623_5645018992284595790_n.jpg)
-![Pruebas1](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/200087686_160587269438462_2896078833731179641_n.jpg)
-![Pruebas1](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/196379647_522368268805317_5530288702061372369_n.jpg)
+
+## Imagen 2
+
+![Pruebas2](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/200087686_160587269438462_2896078833731179641_n.jpg)
+
+## Imagen 3
+<p>
+En la siguiente imagen es posible observar el cambio de estado del módulo durante su interacción con el imán.
+</p>
+
+![Pruebas3](https://github.com/GenaroGonzalezz/Modulo-sensor-KY-025/blob/main/202780707_242333810600301_9135937306506871131_n.jpg)
 
 ## Código
+```
+//========================LIBRERIAS==================
+#include "Arduino.h"
+#include <LiquidCrystal.h>
+#include <Servo.h>
 
+//================sensores======================
+int sensor = 40;
+int lectura;
+//========================LCD config====================================
+
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  lcd.begin(16,2);
+  pinMode(sensor,INPUT);
+  
+}
+
+void loop() {
+  
+
+  lectura = digitalRead(sensor);
+  Serial.println(lectura);
+
+  if (lectura == LOW)
+    {
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Magnetismo:");
+    lcd.setCursor(1,1);
+    lcd.print("Detectado");
+    }
+   else
+  {
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Magnetismo:");
+    lcd.setCursor(1,1);
+    lcd.print("No detectado");
+    }
+  
+  delay(200);
+}
+```
