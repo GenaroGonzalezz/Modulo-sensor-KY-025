@@ -31,3 +31,5 @@ G	| GND
 " +	"| 5V
 D0 | 3
 
+![Diagrama](/images/logo.png)
+
